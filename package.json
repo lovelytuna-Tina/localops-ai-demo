@@ -1,0 +1,23 @@
+{
+  "name": "localops-ai-demo",
+  "version": "1.1.0",
+  "description": "A local-first AI operations assistant POC for creator campaign planning, content review, performance analysis, and task collaboration.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "ai-agent",
+    "product-management",
+    "local-operations",
+    "creator-marketing",
+    "poc"
+  ],
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node scripts/check-data.mjs",
+    "test": "npm run check && node --check server.mjs && node --check public/app.js && node --check public/case-study.js"
+  }
+}

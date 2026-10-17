@@ -1,0 +1,61 @@
+{
+  "id": "CMP-202608-SH-HOTPOT-01",
+  "brand": "沸点火锅",
+  "title": "上海新品套餐达人投放",
+  "city": "上海",
+  "storeCount": 8,
+  "product": {
+    "name": "199元双人火锅套餐",
+    "price": 199,
+    "listPrice": 298
+  },
+  "periodDays": 7,
+  "creatorBudgetCap": 50000,
+  "plannedCreatorCost": 47500,
+  "reserveBudget": 2500,
+  "targetOrders": 500,
+  "targetGmv": 99500,
+  "targetRoiThreshold": 2,
+  "plannedTargetRoi": 2.09,
+  "audience": "20～35岁女性为核心，覆盖上海本地生活及美食兴趣用户",
+  "attribution": "达人视频发布后7日内，通过达人挂载团购商品产生的支付订单",
+  "contentType": "45秒沉浸式达人探店短视频",
+  "selectedPlan": "balanced",
+  "selectedCreatorIds": ["amochi", "guoqi", "afterwork", "xiaolu", "ajie", "pudong", "wujiaochang", "minhang"],
+  "plans": [
+    {
+      "id": "steady",
+      "name": "稳健型",
+      "description": "以高履约和垂类团购达人为主，转化波动较小。",
+      "creatorCount": 8,
+      "cost": 44000,
+      "predictedOrders": 485,
+      "orderRange": [450, 520],
+      "roiRange": [2.03, 2.35],
+      "risk": "低"
+    },
+    {
+      "id": "balanced",
+      "name": "均衡型",
+      "description": "流量、垂类和区域达人组合，兼顾覆盖、种草与团购转化。",
+      "creatorCount": 8,
+      "cost": 47500,
+      "predictedOrders": 520,
+      "orderRange": [460, 580],
+      "roiRange": [1.93, 2.43],
+      "risk": "中低",
+      "recommended": true
+    },
+    {
+      "id": "aggressive",
+      "name": "冲量型",
+      "description": "集中预算获取更高曝光，订单区间更宽、预算集中风险更高。",
+      "creatorCount": 5,
+      "cost": 50000,
+      "predictedOrders": 510,
+      "orderRange": [350, 650],
+      "roiRange": [1.39, 2.59],
+      "risk": "高"
+    }
+  ]
+}

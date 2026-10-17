@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LocalOps AI 本地生活达人投放智能运营助手 POC 项目案例">
+  <meta name="theme-color" content="#eef5ff">
+  <title>LocalOps AI｜AI 智能运营助手项目案例</title>
+  <link rel="stylesheet" href="/case-study.css">
+</head>
+<body>
+  <!--
+  THESIS: 让真实产品证据穿过蓝粉渐变空间，拒绝通用卡片式 AI 落地页。
+  OWN-WORLD: 冰蓝、雾粉、浅紫与深蓝灰；大尺度留白、细线轨迹、真实工作台截图和折射式透明框架。
+  STORY: 评审者先理解业务问题与 Agent 决策，再进入可运行 Demo，最后看到验证边界与落地路线。
+  FIRST VIEWPORT: 左侧一句业务命题与主行动，右侧达人推荐真实界面；四阶段 Campaign 轨迹压住首屏底部。
+  FORM: brief-pinned Gradient Evidence，代码主导，真实截图优先；seed gradient-evidence-v1。
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+  -->
+
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="icon-question" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/><path d="M9.8 9a2.35 2.35 0 0 1 4.55.8c0 1.7-2.35 1.8-2.35 3.45M12 17h.01"/></symbol>
+    <symbol id="icon-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c.65-3.3 2.45-5 5.5-5s4.85 1.7 5.5 5"/><circle cx="17" cy="9" r="2.25"/><path d="M15.5 14.6c2.85-.45 4.7 1 5.1 3.7"/></symbol>
+    <symbol id="icon-pen" viewBox="0 0 24 24"><path d="m5 19 1.05-4.1L16.7 4.3a2.1 2.1 0 0 1 3 3L9.05 18 5 19Z"/><path d="m14.8 6.2 3 3"/></symbol>
+    <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M4 20V11M10 20V5M16 20v-7M22 20H2"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12.5 4.2 4.2L19 7"/></symbol>
+    <symbol id="icon-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7.5" ry="3"/><path d="M4.5 5v6c0 1.7 3.35 3 7.5 3s7.5-1.3 7.5-3V5M4.5 11v6c0 1.7 3.35 3 7.5 3s7.5-1.3 7.5-3v-6"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.2c0 4.65 2.55 7.8 7 9.8 4.45-2 7-5.15 7-9.8V6l-7-3Z"/><path d="m8.8 12.1 2 2 4.4-4.4"/></symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8.5 7-5 5 5 5M15.5 7l5 5-5 5M13.5 4l-3 16"/></symbol>
+    <symbol id="icon-open" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-9 9M19 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h4"/></symbol>
+  </svg>
+
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="ambient-field" aria-hidden="true">
+    <span class="ambient-orb orb-blue"></span>
+    <span class="ambient-orb orb-pink"></span>
+    <span class="ambient-orb orb-violet"></span>
+  </div>
+
+  <header class="case-nav">
+    <a class="case-brand" href="#overview" aria-label="返回案例页顶部">
+      <span class="case-brand-mark">L</span>
+      <span>LocalOps AI <small>Case Study</small></span>
+    </a>
+    <nav class="case-links" aria-label="案例页章节导航">
+      <a href="#problem">业务问题</a>
+      <a href="#solution">Agent方案</a>
+      <a href="#demo">现场演示</a>
+      <a href="#value">落地价值</a>
+    </nav>
+    <a class="nav-demo" href="/?fresh=1" target="_blank" rel="noopener">
+      开始演示
+      <svg><use href="#icon-arrow-up-right"/></svg>
+    </a>
+  </header>
+
+  <a class="floating-demo" href="/?fresh=1" target="_blank" rel="noopener">
+    <span>开始全新演示</span>
+    <svg><use href="#icon-arrow-up-right"/></svg>
+  </a>
+
+  <main>
+    <section class="hero section-shell" id="overview" data-tone="blue" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title"><span class="hero-name">LocalOps AI</span><span>把达人投放转化为可解释、可审核、可复盘的 AI 交付流程</span></h1>
+        <p class="hero-lead">一个面向本地生活运营团队的 AI 智能运营助手 POC。它不止回答问题，而是沿着同一个 Campaign 推进需求、方案、内容和复盘。</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="/?fresh=1" target="_blank" rel="noopener">开始全新演示<svg><use href="#icon-arrow-up-right"/></svg></a>
+          <a class="text-action" href="#solution">查看解决方案</a>
+        </div>
+        <div class="hero-tags" aria-label="项目标签">
+          <span>本地生活</span><span>达人投放</span><span>AI Agent</span><span>业务价值 POC</span>
+        </div>
+      </div>
+
+      <figure class="product-frame hero-frame reveal" data-parallax>
+        <div class="frame-glow" aria-hidden="true"></div>
+        <img src="/assets/case-study/creator-recommendation.png" alt="LocalOps AI 达人智能推荐界面，展示三套策略、八位达人组合与人工确认入口">
+        <figcaption><span>真实系统界面</span>达人推荐与方案比较</figcaption>
+      </figure>
+
+      <div class="hero-brief" aria-label="沸点火锅 Campaign 简报">
+        <span><strong>8家</strong>上海门店</span>
+        <span><strong>5万元</strong>达人预算</span>
+        <span><strong>500单</strong>业务目标</span>
+        <span><strong>7日</strong>支付归因</span>
+      </div>
+    </section>
+
+    <section class="problem section-shell" id="problem" data-tone="pink" aria-labelledby="problem-title">
+      <div class="section-heading reveal">
+        <h2 id="problem-title">达人投放的难点，不只是缺少数据</h2>
+        <p>需求、决策、内容和复盘分散在不同角色与系统中，任何一个口径没有对齐，都会变成执行阶段的返工。</p>
+      </div>
+      <div class="problem-layout">
+        <p class="problem-thesis reveal">从“凭经验选人”到“用证据做决定”，中间缺少的是一条能被团队共同理解和执行的业务链路。</p>
+        <div class="pain-list">
+          <article class="pain-item reveal">
+            <span>判断依据</span>
+            <h3>达人组合依赖人工经验</h3>
+            <p>粉丝量、垂类、人群、历史转化与履约表现散落在不同表格里，推荐理由很难复用。</p>
+          </article>
+          <article class="pain-item reveal">
+            <span>协作口径</span>
+            <h3>预算和目标容易反复确认</h3>
+            <p>“5万元是否包含投流”会直接改变达人数量与效果预估，模糊口径会让后续方案失真。</p>
+          </article>
+          <article class="pain-item reveal">
+            <span>结果闭环</span>
+            <h3>投后报表没有变成任务</h3>
+            <p>团队能看到曝光和订单，却未必知道问题属于达人、内容还是门店，也缺少明确责任人。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="roles section-shell" aria-labelledby="roles-title">
+      <div class="section-heading reveal">
+        <h2 id="roles-title">四类角色，在同一个 Campaign 上协作</h2>
+        <p>Agent 负责连接信息与生成建议；关键业务动作仍由对应角色确认。</p>
+      </div>
+      <div class="role-lane reveal">
+        <article><svg><use href="#icon-question"/></svg><strong>项目经理</strong><span>确认目标、预算和方案</span></article>
+        <article><svg><use href="#icon-people"/></svg><strong>达人运营</strong><span>筛选达人、协调档期</span></article>
+        <article><svg><use href="#icon-pen"/></svg><strong>内容审核</strong><span>校验脚本与品牌规则</span></article>
+        <article><svg><use href="#icon-chart"/></svg><strong>数据运营</strong><span>分析效果与门店差异</span></article>
+      </div>
+    </section>
+
+    <section class="solution section-shell" id="solution" data-tone="violet" aria-labelledby="solution-title">
+      <div class="section-heading reveal">
+        <h2 id="solution-title">让 Agent 沿着业务阶段工作，而不是停在聊天框里</h2>
+        <p>每一步都产生可解释的业务输出，并在进入下一阶段前保留人工控制点。</p>
+      </div>
+
+      <div class="campaign-trail" data-campaign-trail>
+        <div class="trail-line" aria-hidden="true"><span></span></div>
+        <article class="trail-step reveal">
+          <div class="trail-marker"><svg><use href="#icon-question"/></svg></div>
+          <div><h3>需求澄清</h3><p>主动追问预算是否包含投流，把业务语言转换为可执行约束。</p><span>输出：Campaign简报</span></div>
+        </article>
+        <article class="trail-step reveal">
+          <div class="trail-marker"><svg><use href="#icon-people"/></svg></div>
+          <div><h3>达人方案</h3><p>综合转化、人群、垂类、内容、履约和成本，生成三套风险收益策略。</p><span>输出：均衡型组合</span></div>
+        </article>
+        <article class="trail-step reveal">
+          <div class="trail-marker"><svg><use href="#icon-pen"/></svg></div>
+          <div><h3>内容审核</h3><p>生成45秒脚本，支持编辑、版本锁定和人工审核，不由 Agent 自动发布。</p><span>输出：审核脚本版本</span></div>
+        </article>
+        <article class="trail-step reveal">
+          <div class="trail-marker"><svg><use href="#icon-chart"/></svg></div>
+          <div><h3>投后复盘</h3><p>分析达人、内容和门店表现，区分数据事实与待验证推断并生成任务。</p><span>输出：优化任务看板</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="decisions section-shell" aria-labelledby="decisions-title">
+      <div class="section-heading reveal">
+        <h2 id="decisions-title">四个设计判断，决定 Agent 是否值得信任</h2>
+        <p>智能不是替用户做完所有决定，而是在正确的时点提供证据、边界和下一步。</p>
+      </div>
+      <div class="evidence-layout">
+        <div class="decision-list">
+          <article class="decision-item reveal"><span>先追问，再推荐</span><p>预算口径没有确认时暂停生成，避免用错误约束计算方案。</p></article>
+          <article class="decision-item reveal"><span>推荐必须可解释</span><p>同时展示评分权重、风险区间、替换理由和不完整数据边界。</p></article>
+          <article class="decision-item reveal"><span>关键动作由人确认</span><p>方案写入、脚本审核和任务创建都保留明确人工控制点。</p></article>
+          <article class="decision-item reveal"><span>事实与推断分层</span><p>模型不能把内容问题的猜测包装成已被业务数据证明的结论。</p></article>
+        </div>
+        <figure class="product-frame content-frame reveal">
+          <img src="/assets/case-study/content-review.png" alt="LocalOps AI 内容工作台，展示45秒脚本、可编辑口播、可选开场和人工审核按钮">
+          <figcaption><span>真实系统界面</span>脚本编辑、版本与人工审核</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="architecture section-shell" aria-labelledby="architecture-title">
+      <div class="section-heading reveal">
+        <h2 id="architecture-title">实现架构服务于可靠交付</h2>
+        <p>这一层不是为了展示代码，而是说明方案怎样运行、怎样兜底、怎样保护业务边界。</p>
+      </div>
+      <div class="architecture-map reveal">
+        <div class="architecture-node primary-node">
+          <svg><use href="#icon-people"/></svg><strong>运营工作台</strong><span>自然语言输入与业务操作</span>
+        </div>
+        <div class="architecture-flow" aria-hidden="true"><span></span></div>
+        <div class="architecture-core">
+          <strong>业务状态与 Agent 流程</strong>
+          <span>统一 Campaign 上下文 · 阶段门禁 · 人工确认</span>
+          <div class="architecture-sources">
+            <div><svg><use href="#icon-code"/></svg><strong>千问</strong><span>脚本生成与数据诊断</span></div>
+            <div><svg><use href="#icon-database"/></svg><strong>业务知识</strong><span>达人库、品牌规则、历史样本</span></div>
+            <div><svg><use href="#icon-shield"/></svg><strong>演示兜底</strong><span>模型不可用仍能稳定验证流程</span></div>
+          </div>
+        </div>
+        <div class="architecture-flow" aria-hidden="true"><span></span></div>
+        <div class="architecture-node outcome-node">
+          <svg><use href="#icon-check"/></svg><strong>人工确认与业务写入</strong><span>可审计、可复盘、可继续推进</span>
+        </div>
+      </div>
+      <div class="reliability-notes reveal">
+        <span>API Key 仅保存在服务端环境变量</span>
+        <span>模拟数据明确标注，不冒充真实结果</span>
+        <span>真实上线再接达人、交易与门店系统</span>
+      </div>
+    </section>
+
+    <section class="demo-gateway section-shell" id="demo" data-tone="blue" aria-labelledby="demo-title">
+      <div class="demo-surface reveal">
+        <div>
+          <h2 id="demo-title">现在，沿着完整流程跑一次</h2>
+          <p>从一句业务目标开始，到多角色优化任务结束。系统会自动重置上一次状态，并在新标签页进入需求澄清。</p>
+        </div>
+        <a class="demo-main-action" href="/?fresh=1" target="_blank" rel="noopener">开始全新演示 · 约6分钟<svg><use href="#icon-arrow-up-right"/></svg></a>
+        <ol class="demo-path">
+          <li>输入目标</li><li>预算追问</li><li>推荐达人</li><li>确认方案</li><li>生成脚本</li><li>人工审核</li><li>投后诊断</li><li>生成任务</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="value section-shell" id="value" data-tone="pink" aria-labelledby="value-title">
+      <div class="section-heading reveal">
+        <h2 id="value-title">POC证明流程可行，试点再证明业务价值</h2>
+        <p>已完成的验证与未来要验证的指标分开表达，避免用模拟数据包装商业成果。</p>
+      </div>
+      <div class="value-layout">
+        <figure class="product-frame analysis-frame reveal">
+          <img src="/assets/case-study/performance-analysis.png" alt="LocalOps AI 投后分析界面，显示420单、83580元GMV、ROI 1.76、转化漏斗和Agent诊断">
+          <figcaption><span>真实系统界面</span>投后诊断与事实推断分层</figcaption>
+        </figure>
+        <div class="value-columns">
+          <article class="value-column reveal">
+            <h3>POC 已经验证</h3>
+            <ul>
+              <li><svg><use href="#icon-check"/></svg>四阶段业务流程可以完整跑通</li>
+              <li><svg><use href="#icon-check"/></svg>11项业务数据一致性检查通过</li>
+              <li><svg><use href="#icon-check"/></svg>关键写入均保留人工确认</li>
+              <li><svg><use href="#icon-check"/></svg>千问与固定演示兜底可以切换</li>
+            </ul>
+          </article>
+          <article class="value-column future reveal">
+            <h3>真实试点需要验证</h3>
+            <ul>
+              <li>方案准备时间是否下降</li>
+              <li>推荐方案采纳率</li>
+              <li>内容首轮审核通过率</li>
+              <li>Agent周活跃使用率</li>
+              <li>优化任务按时关闭率</li>
+              <li>订单与ROI是否真实改善</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="roadmap section-shell" aria-labelledby="roadmap-title">
+      <div class="section-heading reveal">
+        <h2 id="roadmap-title">从可演示的 POC，到可运营的业务系统</h2>
+        <p>项目交付不是一次上线，而是验证、试点、推广和持续复盘。</p>
+      </div>
+      <div class="roadmap-flow reveal">
+        <article><span>POC验证</span><h3>固定样本跑通业务闭环</h3><p>验证用户是否需要、关键控制点是否合理、Agent输出是否可解释。</p></article>
+        <div class="roadmap-arrow" aria-hidden="true"><svg><use href="#icon-arrow-up-right"/></svg></div>
+        <article><span>小范围试点</span><h3>接入真实数据并校准</h3><p>选择少量门店和达人，接入平台、交易和内容数据，跟踪使用率与采纳率。</p></article>
+        <div class="roadmap-arrow" aria-hidden="true"><svg><use href="#icon-arrow-up-right"/></svg></div>
+        <article><span>全量推广</span><h3>把能力变成组织流程</h3><p>补齐权限、审计、监控、培训、SOP和持续运营机制。</p></article>
+      </div>
+    </section>
+
+    <section class="delivery section-shell" aria-labelledby="delivery-title">
+      <div class="delivery-statement reveal">
+        <h2 id="delivery-title">这个项目独立完成了什么</h2>
+        <p>从业务场景分析开始，完成需求拆解、Spec、数据口径、Agent流程、交互设计、前后端实现与验收。</p>
+      </div>
+      <div class="deliverables reveal" aria-label="项目交付物">
+        <span>Spec v1.1</span>
+        <span>可交互POC</span>
+        <span>模拟业务数据集</span>
+        <span>Agent与兜底策略</span>
+        <span>数据一致性检查</span>
+        <span>响应式与可访问性验收</span>
+      </div>
+    </section>
+
+    <section class="final-cta section-shell" aria-labelledby="final-title">
+      <div class="final-copy reveal">
+        <h2 id="final-title">从一个真实业务问题开始，让 AI 进入流程</h2>
+        <p>所有品牌、门店、达人和业务数据均为虚构样本，仅用于验证 POC 价值。</p>
+        <a class="primary-action" href="/?fresh=1" target="_blank" rel="noopener">开始全新演示<svg><use href="#icon-arrow-up-right"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="case-footer">
+    <span>LocalOps AI · AI 智能运营助手 POC</span>
+    <a href="#overview">返回顶部</a>
+  </footer>
+
+  <script type="module" src="/case-study.js"></script>
+</body>
+</html>

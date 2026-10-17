@@ -1,0 +1,10 @@
+[
+  { "id": "xujiahui", "name": "徐家汇店", "district": "徐汇区", "businessArea": "徐家汇", "targetOrders": 80, "actualOrders": 72, "attributedVisits": 3800, "conversionRate": 0.0189 },
+  { "id": "jingansi", "name": "静安寺店", "district": "静安区", "businessArea": "静安寺", "targetOrders": 70, "actualOrders": 55, "attributedVisits": 3500, "conversionRate": 0.0157 },
+  { "id": "people", "name": "人民广场店", "district": "黄浦区", "businessArea": "人民广场", "targetOrders": 60, "actualOrders": 48, "attributedVisits": 2700, "conversionRate": 0.0178 },
+  { "id": "wujiaochang", "name": "五角场店", "district": "杨浦区", "businessArea": "五角场", "targetOrders": 65, "actualOrders": 63, "attributedVisits": 2900, "conversionRate": 0.0217 },
+  { "id": "lujiazui", "name": "陆家嘴店", "district": "浦东新区", "businessArea": "陆家嘴", "targetOrders": 70, "actualOrders": 48, "attributedVisits": 3600, "conversionRate": 0.0133 },
+  { "id": "zhongshan", "name": "中山公园店", "district": "长宁区", "businessArea": "中山公园", "targetOrders": 55, "actualOrders": 50, "attributedVisits": 2400, "conversionRate": 0.0208 },
+  { "id": "hongqiao", "name": "虹桥店", "district": "长宁区", "businessArea": "虹桥", "targetOrders": 50, "actualOrders": 43, "attributedVisits": 2100, "conversionRate": 0.0205 },
+  { "id": "xinzhuang", "name": "莘庄店", "district": "闵行区", "businessArea": "莘庄", "targetOrders": 50, "actualOrders": 41, "attributedVisits": 1900, "conversionRate": 0.0216 }
+]

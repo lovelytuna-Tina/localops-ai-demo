@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "targetOrders": 500,
+    "actualOrders": 420,
+    "completionRate": 0.84,
+    "price": 199,
+    "gmv": 83580,
+    "actualCreatorCost": 47500,
+    "roi": 1.76,
+    "totalViews": 1250000,
+    "attributionWindowDays": 7,
+    "redemptionStatus": "30日观察周期未结束"
+  },
+  "creators": [
+    { "creatorId": "amochi", "views": 420000, "orders": 40, "gmv": 7960, "cost": 10000, "roi": 0.8, "diagnosis": "高曝光、低转化" },
+    { "creatorId": "guoqi", "views": 220000, "orders": 85, "gmv": 16915, "cost": 8000, "roi": 2.11, "diagnosis": "垂类表现稳定" },
+    { "creatorId": "afterwork", "views": 180000, "orders": 45, "gmv": 8955, "cost": 6500, "roi": 1.38, "diagnosis": "访问和转化偏低" },
+    { "creatorId": "xiaolu", "views": 130000, "orders": 80, "gmv": 15920, "cost": 6000, "roi": 2.65, "diagnosis": "人群和场景匹配较好" },
+    { "creatorId": "ajie", "views": 85000, "orders": 65, "gmv": 12935, "cost": 5000, "roi": 2.59, "diagnosis": "曝光一般但转化优秀" },
+    { "creatorId": "pudong", "views": 90000, "orders": 50, "gmv": 9950, "cost": 4500, "roi": 2.21, "diagnosis": "地域匹配有效" },
+    { "creatorId": "wujiaochang", "views": 70000, "orders": 35, "gmv": 6965, "cost": 4000, "roi": 1.74, "diagnosis": "中等表现" },
+    { "creatorId": "minhang", "views": 55000, "orders": 20, "gmv": 3980, "cost": 3500, "roi": 1.14, "diagnosis": "样本较小、转化偏低" }
+  ],
+  "funnel": [
+    { "name": "视频播放", "value": 1250000, "rate": 1 },
+    { "name": "有效互动", "value": 112500, "rate": 0.09 },
+    { "name": "门店访问", "value": 22900, "rate": 0.01832 },
+    { "name": "商品访问", "value": 11350, "rate": 0.49563 },
+    { "name": "支付订单", "value": 420, "rate": 0.037 }
+  ]
+}

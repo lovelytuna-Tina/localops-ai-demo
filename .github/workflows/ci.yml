@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate data and JavaScript syntax
+        run: npm test
+
+      - name: Smoke test local API
+        shell: bash
+        run: |
+          node server.mjs > /tmp/localops-ai.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID' EXIT
+
+          for attempt in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:4173/api/status > /dev/null; then
+              break
+            fi
+            sleep 0.25
+          done
+
+          curl --fail --silent http://127.0.0.1:4173/api/status
+          curl --fail --silent http://127.0.0.1:4173/api/bootstrap > /dev/null
